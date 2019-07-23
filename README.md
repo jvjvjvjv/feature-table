@@ -5,6 +5,6 @@ The script will prompt the user for gene name, product name, and the translation
 
 To run:
 ```
-python feature-table.py [path-to-fasta-file]
+python feature-table.py [path-to-fasta-file] [optional-output-file]
 ```
 

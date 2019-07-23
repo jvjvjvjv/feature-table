@@ -8,9 +8,9 @@ fasta = sys.argv[1]
 sequence_record = list(SeqIO.parse(fasta, "fasta"))
 
 for i in sequence_record:
-    frame_1 = i.seq.translate(5)
-    frame_2 = i.seq[1:].translate(5)
-    frame_3 = i.seq[2:].translate(5)
+    frame_1 = i.seq.translate(table)
+    frame_2 = i.seq[1:].translate(table)
+    frame_3 = i.seq[2:].translate(table)
     for m,j in enumerate([frame_1, frame_2, frame_3]):
         if "*" not in j[:-1]:
             if j[0] is "M":   #if first codon is start
